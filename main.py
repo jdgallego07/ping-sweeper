@@ -1,12 +1,12 @@
 import subprocess
 
 # 1. Definimos la base de la red de tu casa (los primeros 3 números)
-base_red = " 192.168.1."
+base_red = "192.168.1."
 
 print("Iniciando escaneo de prueba dinámico...")
 
-# 2. Creamos un bucle que va a contar del 1 al 3
-for host in range(1, 4):
+# 2. Creamos un bucle que va a contar del 1 al 12
+for host in range(1, 12):
     
     # Construimos la IP uniendo la base con el número actual del conteo
     ip_objetivo = base_red + str(host)
