@@ -1,25 +1,25 @@
 import subprocess
 
-# 1. Definimos la base de la red de tu casa (los primeros 3 números)
 base_red = "192.168.1."
+# Creamos una variable para contar los dispositivos encontrados
+dispositivos_encontrados = 0
 
-print("Iniciando escaneo de prueba dinámico...")
+print("🔍 Iniciando escaneo silencioso de la red local...")
+print("Por favor, espera un momento...\n")
 
-# 2. Creamos un bucle que va a contar del 1 al 12
-for host in range(1, 12):
-    
-    # Construimos la IP uniendo la base con el número actual del conteo
+# Ampliamos un poco el rango (por ejemplo, del 1 al 20 para probar)
+for host in range(1, 21):
     ip_objetivo = base_red + str(host)
-    print(f"Probando: {ip_objetivo}")
-
-    # Configuración del comando ping
-    comando = ["ping", "-n", "1", "-w", "1000", ip_objetivo]
     
-    # Ejecutamos el ping de forma silenciosa
+    comando = ["ping", "-n", "1", "-w", "1000", ip_objetivo]
     resultado = subprocess.run(comando, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     
-    # Evaluamos el resultado
     if resultado.returncode == 0:
-        print(f"  ✅ ¡Dispositivo encontrado en {ip_objetivo}!")
-    else:
-        print(f"  ❌ {ip_objetivo} no respondió.")
+        print(f"✅ ¡Dispositivo ENCONTRADO! -> {ip_objetivo}")
+        # Si encuentra uno, le sumamos 1 al contador
+        dispositivos_encontrados += 1
+    # Eliminamos el 'else' para que no imprima nada si la IP está inactiva
+
+# Al salir del bucle, mostramos el resumen
+print("\n=== Escaneo Finalizado ===")
+print(f"📊 Total de dispositivos activos detectados: {dispositivos_encontrados}")
