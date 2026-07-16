@@ -1,0 +1,16 @@
+==================================================
+      REPORTE DE SEGURIDAD - RED LOCAL CASERA     
+==================================================
+Fecha y Hora del Análisis: 2026-07-16 12:11:10
+Rango de IPs analizado: 192.168.1.1 al 192.168.1.24
+--------------------------------------------------
+
+✅ ¡Dispositivo ENCONTRADO! -> 192.168.1.1 | Nombre: Nombre desconocido
+✅ ¡Dispositivo ENCONTRADO! -> 192.168.1.7 | Nombre: Nombre desconocido
+✅ ¡Dispositivo ENCONTRADO! -> 192.168.1.10 | Nombre: DESKTOP-8KKVKDH
+
+--------------------------------------------------
+
+=== Escaneo Finalizado ===
+📊 Total de dispositivos activos detectados: 3
+==================================================
